@@ -3,6 +3,7 @@ let lNameError = document.getElementById("lNameError");
 let passError = document.getElementById("passError");
 let emailError = document.getElementById("emailError");
 let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+
 function validateForm()
 {
     let fName = document.forms["registration"]["firstName"].value;
@@ -39,6 +40,10 @@ function validateForm()
         passError.textContent = "Password cannot be empty";
         document.getElementById("password").classList.add("invalid");
         document.getElementById("password").classList.add("errorImage");
+    }
+
+    else{
+        alert("Free Trial Claimed");
     }
    
 }
